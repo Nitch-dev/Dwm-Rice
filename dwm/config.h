@@ -61,12 +61,13 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "/home/hassan/suckless/dmenu/dmenu_run", NULL };
+static const char *dmenucmd[] = { "/home/zayn-js/Dwm-Rice/dmenu/dmenu_run", NULL };
 static const char *termcmd[]  = { "xfce4-terminal", NULL };
 static const char *screenshot[]  = { "sh /home/hassan/ss.sh", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY, 			XK_s, 	   spawn, 	   SHCMD("sh /home/hassan/ss.sh") },
+	{ MODKEY, 			XK_b, 	   spawn, 	   SHCMD("firefox") },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
